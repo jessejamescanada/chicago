@@ -1,9 +1,9 @@
 :root {
-    --primary-color: #f2f2f2;
+    --primary-color: rgb(235,214,214);
     --secondary-color: #eae7dc;
     --max-width: 1200px;
-    --main-font: "Montserrat", sans-serif;
-    --secondary-font: "Roboto", sans-serif;
+    --main-font: "Georgia", sans-serif;
+    --secondary-font: "Georgia", sans-serif;
     --link-color: #8e8d8a;
     --btn-color: #daad86;
   }
@@ -93,11 +93,14 @@
     list-style: none;
   }
   .navbar li a{
-    color: var(--link-color);
+    color: rgba(125,125,125,1);
     margin: 0px 10px;
     text-decoration: none;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+
+    /* font-weight: bold; */
   }
   
   .navbar .fullScreen-hide{
@@ -171,25 +174,7 @@
   }
   
   .typewriter{
-    visibility: hidden;
-    overflow: hidden;
-    border-right: .15em solid orange;
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: .15em;
-    
-    animation:
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-    animation-delay: .8s;
-  }
-  @keyframes typing{
-    from {width: 0; visibility: visible;}
-    to {width: 100%}
-  }
-  @keyframes blink-caret{
-    from, to {border-color: transparent; visibility: visible;}
-    50% {border-color: orange;}
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   
   /* who */
@@ -197,6 +182,7 @@
     display: flex;
     width: 100%;
     padding: 50px;
+    background-color: rgb(255,248,248);
   }
   .about-content{
     display: flex;
@@ -206,9 +192,9 @@
     align-items: center;
     justify-content: center;
     padding: 75px;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 10px 10px 5px -10px rgba(0,0,0,.75);
+    /* background: white; */
+    /* border-radius: 5px;
+    box-shadow: 10px 10px 5px -10px rgba(0,0,0,.75); */
   }
   
   .about-container img{
@@ -220,6 +206,13 @@
   
   .who-content-container {
     margin-left: 50px;
+  }
+  .who-content-container p{
+    color: #7d7d7d;
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: .12em;
+    line-height: 1.3em;
   }
   .weddingLink{
     text-decoration: none;
@@ -247,6 +240,18 @@
     width: 1200px;
     margin: 50px auto;
   }
+
+  .bottomBorder{
+    border-bottom: 2px solid black;
+    width: 100%;
+  }
+
+  .bottomBorder2{
+    padding-top: 30px;
+    border-bottom: 1px solid black;
+    background-color: rgb(255,248,248);
+    box-shadow: 10px 10px 5px -10px rgba(0,0,0,.75);
+  }
   /* services */
 
   #services h2{
@@ -256,15 +261,23 @@
     font-size: 38px;
   }
   
-  .services-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15px;
-    width: 1200px;
-    margin: 50px auto;
+  #services{
+    /* background-color: white; */
+    width: 100%;
+    margin: auto;
     background-color: white;
-    padding: 50px;
-    box-shadow: 10px 10px 5px -10px rgba(0,0,0,.75);
+  }
+  .services-container{
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px; */
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: auto;
+    background-color: white;
+    padding: 100px 50px;
+    /* box-shadow: 10px 10px 5px -10px rgba(0,0,0,.75); */
   }
   
   .services-text{
@@ -273,7 +286,7 @@
     text-align: center;
   }
   
-   .services-container > *:first-child,
+   /* .services-container > *:first-child,
    .services-container > *:nth-child(2),
    .services-container > *:nth-child(3),
    .services-container > *:last-child
@@ -281,16 +294,28 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     grid-column: 1 / span 3;
-  }
+  } */
   
   .services-container .card img{
-    height: 360px;
+    height: 200px;
     width: auto;
     box-shadow: 10px 10px 5px -10px rgba(0,0,0,.75);
+    
   }
-  
+  .services-container .card:hover{
+    text-decoration: none;
+    transform: scale(1.15);
+    display: block;
+    object-fit: cover;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .services-container .card a{
+    text-decoration: none;
+  }
   .services-title{
     color: var(--btn-color);
     font-size: 28px;
@@ -419,7 +444,8 @@
   }
   
   /* gallery */
-  
+
+
   #portfolio h2{
     text-align: center;
     font-family: Montserrat;
@@ -430,8 +456,8 @@
   .gallery-container{
     padding: 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    /* grid-auto-rows: 250px; */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
     grid-column-gap: 8px;
     grid-row-gap: 8px;
   }
@@ -443,7 +469,7 @@
   .slide{
     overflow: hidden;
     box-shadow: 10px 10px 5px -10px rgba(0,0,0,.75);
-    border-radius: 8px;
+    /* border-radius: 8px; */
   }
   
   .slide img{
@@ -452,7 +478,7 @@
     display: block;
     object-fit: cover;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    border-radius: 8px;
+    /* border-radius: 8px; */
   }
   
   .slide img:hover{
@@ -463,22 +489,23 @@
   .contact-container{
     display: flex;
     flex-direction: column;
-    width: 80%;
+    background-color: rgb(255,248,248);
+    width: 100%;
     text-align: center;
     margin: auto;
-    margin-top: 30px;
-    padding: 20px;
+    /* margin-top: 30px; */
+    padding: 40px 20px;
     align-items: center;
   }
   
   .ccForm{
     display: flex;
     flex-direction: column;
-    background-color: rgb(129, 129, 129);
+    /* background-color: rgb(129, 129, 129); */
     padding: 50px;
     border-radius: 3px;
     margin-bottom: 20px;
-    box-shadow: 10px 10px 5px -10px rgba(0,0,0,.75);
+    /* box-shadow: 10px 10px 5px -10px rgba(0,0,0,.75); */
   }
   .ccForm h3{
     color: var(--btn-color);
@@ -496,11 +523,11 @@
   .ccField-prepend input, .ccField-prepend textarea{
     width: 500px;
     padding: 10px;
-    border-radius: 3px;
-    border: none;
+    /* border-radius: 3px; */
+    border: 1px solid lightgray;
     margin-bottom: 10px;
     font-size: 18px;
-    box-shadow: 10px 10px 5px -10px rgba(0,0,0,.75);
+    /* box-shadow: 10px 10px 5px -10px rgba(0,0,0,.75); */
   }
   .ccField-prepend textarea{
     padding: 30px;
@@ -509,7 +536,7 @@
     margin-bottom: 7px;
     font-size: 20px;
     text-align: left;
-    color: whitesmoke;
+    color: red;
   }
   .star{color: #cc0000}
   
@@ -517,6 +544,7 @@
   footer{
     text-align: center;
     padding: 50px 0px;
+    background-color: white;
   }
   footer a{
     color: #cc0000;
@@ -525,3 +553,60 @@
   }
   
   
+
+
+  /* other pages */
+
+  .container-Engage{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255,248,248);
+    ;
+    width: auto;
+  }
+  .engagements-Container{
+    display: flex;
+    width: 1200px;
+    margin: auto;
+    padding: 100px;
+  }
+  .engagements-Container h2{
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: .12em;
+  }
+  .engagements-Container p{
+    color: #7d7d7d;
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: .12em;
+    line-height: 1.5em;
+  }
+  .engage-content{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+  }
+
+  .engage-content img{
+    height: 350px;
+    width: auto;
+  }
+
+  .engage-content-container{
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+
+  .engage-Port{
+    width: 1200px;
+    margin: auto;
+  }
+  #portfolio{
+    background-color: white;
+  }

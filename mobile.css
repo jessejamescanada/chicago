@@ -2,6 +2,9 @@
 
 /* 1199px */
 @media(max-width: 1199px){
+  body{
+    position: absolute;
+  }
     .packages-container{
       display: grid;
       grid-template-rows: repeat(2, 1fr);
@@ -91,7 +94,6 @@
     }
     .ccForm{
       width: auto;
-      /* padding: 0; */
     }
     .ccField-prepend input, .ccField-prepend textarea{
       width: auto;
@@ -101,9 +103,10 @@
   /* 500px */
   @media(max-width: 500px) {
     body{
-      width: auto;
+      /* width: 100vw; */
+      position: absolute;
     }
-  
+
     .socialMedia{
       /* display: none; */
       /* width: 350px; */
@@ -112,7 +115,7 @@
     .top-btn{
       padding: 5px;
       margin: 0;
-      width: 75px;
+      /* width: 75px; */
       opacity: 0.8;
     }
     .navbar{
@@ -148,7 +151,7 @@
     }
   
     .sticky{
-      position: relative;
+      /* position: relative; */
       padding: 20px 2px;
     }
     #showcase1 img{
@@ -176,6 +179,7 @@
     .about-container img{
       /* display: none; */
       width: 100%;
+      height: auto;
       margin-bottom: 10px;
     }
     .who-content-container{
@@ -183,7 +187,7 @@
     }
     .about-content{
       width: auto;
-      padding: 10px;
+      padding: 20px;
     }
     .about-content h2{
       text-align: center;
@@ -191,12 +195,42 @@
     .about-content p{
       text-align: left;
       width: 100%;
+      font-size: 24px;
     }
+    .container-Engage{
+      /* display: flex; */
+      /* flex-direction: column; */
+      /* width: 400px; */
+      /* height: auto; */
+      /* margin: auto; */
+      /* width: 100%; */
+    }
+    .engagements-Container{
+      /* margin: auto; */
+      /* width: 100%; */
+    }
+    .engage-content{
+      display: flex;
+      flex-direction: column;
+      /* width: auto; */
+      margin: auto;
+    }
+    .engage-content img{
+      height: auto;
+    }
+    .engage-content-container h2{
+      font-size: 32px;
+    }
+    .engage-content-container p{
+      font-size: 26px;
+    }
+    .services-container{}
     .services-container, .services-container .card{
       display: flex;
       flex-direction: column;
       padding: 5px 5px;
       margin-top: 0px;
+      margin: auto;
     }
   
     .mobile-hide{
@@ -216,7 +250,7 @@
    }
    .services-container .card img{
      margin-top: 25px;
-     height: 250px;
+     height: 350px;
      width: auto;
    }
   
@@ -241,11 +275,21 @@
    .gallery-container{
      display: flex;
      flex-direction: column;
+     /* width: 100%; */
      padding: 5px;
      padding-top: 50px;
    }
+   .engage-port{
+    
+   }
+   .slide{
+     width: auto;
+     height: auto;
+   }
    .slide img{
      margin-bottom: 5px;
+     /* width: 100%; */
+     /* height: auto; */
    }
   
    .showcase2 .showcase-container, .showcase3 .showcase-container{
@@ -260,7 +304,10 @@
    }
   
    .contact-container{
-     width: 50px;
+     width: auto;
+   }
+   .contact-content{
+     width: 80%;
    }
    .ccform{
      padding: 0;
@@ -269,7 +316,23 @@
    .ccField-prepend{
      width: auto;
    }
+   .ccField-prepend label{
+     font-size: 46px;
+   }
    .ccField-prepend input, .ccField-prepend textarea{
      width: auto;
+     padding: 20px 10px; line-height: 28px;
+     font-size: 26px;
    }
+   .btn{
+     padding: 30px 60px;
+     font-size: 36px;
+   }
+   .bottomBorder, .bottomBorder2{
+    display: none;
   }
+  footer{
+    font-size: 40px;
+  }
+  }
+
