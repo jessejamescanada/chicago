@@ -279,11 +279,17 @@
     padding: 100px 50px;
     /* box-shadow: 10px 10px 5px -10px rgba(0,0,0,.75); */
   }
+  #services h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    padding-top: 5px;
+  }
   
   .services-text{
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 0;
   }
   
    /* .services-container > *:first-child,
