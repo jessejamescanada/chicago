@@ -16,7 +16,7 @@
   body{
     font-family: 'Montserrat', sans-serif;
     line-height: 1.4;
-    background: #f2f2f2;
+    background: rgb(255,248,248);
   }
   
   html {
@@ -72,7 +72,9 @@
     top: 0;
     z-index: 2;
     background-color: var(--primary-color);
+    border-bottom: 1px solid lightgray;
   }
+
   
   .sticky {
     position: fixed;
@@ -102,6 +104,7 @@
 
     /* font-weight: bold; */
   }
+
   
   .navbar .fullScreen-hide{
     display: none;
@@ -266,6 +269,7 @@
     width: 100%;
     margin: auto;
     background-color: white;
+    overflow: hidden;
   }
   .services-container{
     /* display: grid;
@@ -566,4 +570,20 @@
   }
   #portfolio{
     background-color: white;
+  }
+
+  .banner{
+    margin-top: 50px;
+    background-color: white;
+  }
+  .banner-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+  .banner-container img{
+    margin: 0 1px;
+    max-width: 20%;
   }
