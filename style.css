@@ -199,6 +199,10 @@
     /* border-radius: 5px;
     box-shadow: 10px 10px 5px -10px rgba(0,0,0,.75); */
   }
+  .aboutTitle{
+    margin-bottom: 5px;
+    margin-top: 8px;
+  }
   
   .about-container img{
     width: auto;
@@ -288,6 +292,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 300;
     padding-top: 5px;
+    font-size: 20px;
   }
   
   .services-text{
@@ -303,6 +308,9 @@
     width: auto;
     box-shadow: 10px 10px 5px -10px rgba(0,0,0,.75);
     
+  }
+  .card{
+    margin: 0 3px;
   }
 
   .card img:hover{
@@ -324,7 +332,7 @@
   }
   .services-title{
     color: var(--btn-color);
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 100;
     font-family: 'Courgette', cursive;
   }
